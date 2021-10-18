@@ -7,7 +7,7 @@ public class BBTester {
 		int a = 1;
 		int b = 1;
 		int gameNum = 1;
-    // line 11- 30 is opening game function
+		//lines 11 - 55  is the openig game function
 		System.out.println(" ");
 		System.out.println("Welcome to Battle Board!");
 		System.out.println("Would you like to play?");
@@ -20,6 +20,32 @@ public class BBTester {
 				myStand.rules();
 				myStand.shipPlacement();
 				a = 0;
+				//this while loop does the play again function
+				while ( b == 1) {
+					gameNum = gameNum + 1;
+					Scanner question = new Scanner(System.in);
+					System.out.println("\nWould you like to play again?");
+					System.out.print("Yes or No : ");
+					String playAgain = keyboard.nextLine();
+					if ( playAgain.equals("Yes") || playAgain.equals("yes")) {
+						b = 1;
+						a = 0;
+						System.out.println("\nGame " + gameNum + ": \n");
+						myStand.array();
+						myStand.rules();
+						myStand.shipPlacement();
+					}
+					else if ( playAgain.equals("No") || playAgain.equals("no"))  {
+						b = 0;
+						a = 0;
+						System.out.println("\nThanks for playing! See you again next time!");
+					}
+					else {
+						System.out.println("\nPlease type Yes or No.\n");
+						b = 1;
+					}
+				}
+			}
 			else if (welcome.equals("No") || welcome.equals("no")) {
 				System.out.println("Ok! See you next time!");
 				a = 0;
