@@ -30,4 +30,10 @@ public class battleBoard {
 		System.out.println("You get 5 ships to place. You have 1 5 length ship, 1 4 length ship, 2 3 length ships, and 1 2 length ship.");
 		System.out.println("You will choose where to place each ship either horizontally and verticallly, no diagonally.");
 	}
+
+	//Kathyrn's thing stating ship placement
+	public void shipPlacement() {
+		Scanner keyboard = new Scanner(System.in);
+		System.out.println("\nWhere would you like to place your 5 length ship?  Please type in every position you like to place it in (Ex. A1, A2, A3, A4, A5)");
+	}
 }
